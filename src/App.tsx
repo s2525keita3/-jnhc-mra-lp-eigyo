@@ -6,6 +6,7 @@ import { LegalDocuments } from '@/components/legal';
 
 // Sections (Lazy loaded for performance)
 const Hero = lazy(() => import('@/components/sections/Hero').then(m => ({ default: m.Hero })));
+const Future = lazy(() => import('@/components/sections/Future').then(m => ({ default: m.Future })));
 const Problem = lazy(() => import('@/components/sections/Problem').then(m => ({ default: m.Problem })));
 const Why = lazy(() => import('@/components/sections/Why').then(m => ({ default: m.Why })));
 const Program = lazy(() => import('@/components/sections/Program').then(m => ({ default: m.Program })));
@@ -27,42 +28,47 @@ function App() {
           <Hero />
         </Suspense>
 
-        {/* 2. Problem - 課題提起 */}
+        {/* 2. Future - 達成の未来・ゴール */}
+        <Suspense fallback={<div className="h-96" />}>
+          <Future />
+        </Suspense>
+
+        {/* 3. Problem - 課題提起 */}
         <Suspense fallback={<div className="h-96" />}>
           <Problem />
         </Suspense>
 
-        {/* 3. Why - 設計型 vs 場当たり型 */}
+        {/* 4. Why - 設計型 vs 場当たり型 */}
         <Suspense fallback={<div className="h-96" />}>
           <Why />
         </Suspense>
 
-        {/* 4. Program - 3ヶ月のプログラム内容 */}
+        {/* 5. Program - 3ヶ月のプログラム内容 */}
         <Suspense fallback={<div className="h-96" />}>
           <Program />
         </Suspense>
 
-        {/* 5. ROI - 投資対効果 */}
+        {/* 6. ROI - 投資対効果 */}
         <Suspense fallback={<div className="h-96" />}>
           <Roi />
         </Suspense>
 
-        {/* 6. Profile - 講師紹介 */}
+        {/* 7. Profile - 講師紹介 */}
         <Suspense fallback={<div className="h-96" />}>
           <Profile />
         </Suspense>
 
-        {/* 7. Pricing - 料金・申し込み */}
+        {/* 8. Pricing - 料金・申し込み */}
         <Suspense fallback={<div className="h-96" />}>
           <Pricing />
         </Suspense>
 
-        {/* 8. FAQ - よくある質問 */}
+        {/* 9. FAQ - よくある質問 */}
         <Suspense fallback={<div className="h-96" />}>
           <Faq />
         </Suspense>
 
-        {/* 9. Closing - 最終CTA */}
+        {/* 10. Closing - 最終CTA */}
         <Suspense fallback={<div className="h-96" />}>
           <Closing />
         </Suspense>

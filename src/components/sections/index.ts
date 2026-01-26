@@ -1,5 +1,6 @@
 // Section Components
 export { Hero } from './Hero';
+export { Future } from './Future';
 export { Problem } from './Problem';
 export { Why } from './Why';
 export { Program } from './Program';
