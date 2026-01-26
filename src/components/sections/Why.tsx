@@ -1,8 +1,8 @@
 import { CheckCircle, XCircle, Sprout, Target } from 'lucide-react';
-import { salesWhyData } from '@/content/sales-why';
+import { whyData } from '@/content/why';
 
-export const SalesWhy = () => {
-  const { comparison, whyFarming } = salesWhyData;
+export const Why = () => {
+  const { comparison, whyFarming } = whyData;
 
   return (
     <section className="py-20 md:py-28 bg-white">
@@ -14,10 +14,10 @@ export const SalesWhy = () => {
             Why Design?
           </span>
           <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">
-            {salesWhyData.title}
+            {whyData.title}
           </h2>
           <p className="text-text-tertiary text-base md:text-lg max-w-2xl mx-auto">
-            {salesWhyData.subtitle}
+            {whyData.subtitle}
           </p>
         </div>
 
@@ -103,7 +103,7 @@ export const SalesWhy = () => {
           <div className="inline-block bg-gradient-to-r from-baum-500 to-baum-400 rounded-xl p-1">
             <div className="bg-white rounded-lg px-8 py-4">
               <p className="text-lg font-bold text-text-primary">
-                {salesWhyData.conclusion}
+                {whyData.conclusion}
               </p>
             </div>
           </div>

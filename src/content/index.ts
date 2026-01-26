@@ -1,11 +1,10 @@
-export { pricingData } from './pricing';
-export { roiData } from './roi';
-export { programData } from './program';
-export { faqData } from './faq';
+// Content Data Exports
 export { heroData } from './hero';
-export { problemData } from './problems';
+export { problemData } from './problem';
+export { whyData } from './why';
+export { programData } from './program';
+export { roiData } from './roi';
+export { profileData } from './profile';
+export { pricingData } from './pricing';
+export { faqData } from './faq';
 export { closingData } from './closing';
-export { usageFlowData } from './usageFlow';
-
-
-

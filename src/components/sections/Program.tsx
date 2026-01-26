@@ -1,11 +1,11 @@
 import { MessageCircle, Target, Cpu, Compass, User, Users, Video, MessageSquare, CheckCircle } from 'lucide-react';
-import { salesProgramData } from '@/content/sales-program';
+import { programData } from '@/content/program';
 
 const featureIcons = { MessageCircle, Target, Cpu, Compass };
 const scheduleIcons = { User, Users, Video, MessageSquare };
 
-export const SalesProgram = () => {
-  const { overview, phases, schedule } = salesProgramData;
+export const Program = () => {
+  const { overview, phases, schedule } = programData;
 
   return (
     <section className="py-20 md:py-28 bg-white">
@@ -16,10 +16,10 @@ export const SalesProgram = () => {
             3-Month Program
           </span>
           <h2 className="text-2xl md:text-4xl font-bold text-text-primary mt-6 mb-4">
-            {salesProgramData.title}
+            {programData.title}
           </h2>
           <p className="text-text-tertiary text-base md:text-lg max-w-2xl mx-auto">
-            {salesProgramData.subtitle}
+            {programData.subtitle}
           </p>
         </div>
 
@@ -172,7 +172,7 @@ export const SalesProgram = () => {
 
         {/* Note */}
         <p className="text-center text-text-tertiary text-sm mt-8 animate-fade-up">
-          {salesProgramData.note}
+          {programData.note}
         </p>
       </div>
     </section>

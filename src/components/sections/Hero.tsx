@@ -1,85 +1,83 @@
-// React / Library imports
 import { useMemo } from 'react';
+import { heroData } from '@/content/hero';
 
-// Components
-import { RichCtaButton } from '@/components/ui/RichCtaButton';
-import { heroData } from '@/content';
-import { STRIPE_CHECKOUT_URL } from '@/shared/constants';
+const CONSULTATION_URL = "#consultation";
 
 export const Hero = () => {
   const titleLines = useMemo(() => heroData.title.split('\n'), []);
 
   return (
-    <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 gradient-bg text-text-primary overflow-hidden">
+    <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-white overflow-hidden">
       {/* Abstract Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-10 left-10 w-32 h-32 bg-baum-500 opacity-5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-10 right-10 w-64 h-64 bg-baum-400 opacity-10 rounded-full blur-3xl"></div>
+        <div className="absolute top-10 left-10 w-64 h-64 bg-baum-500 opacity-5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-baum-400 opacity-5 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center relative z-10">
-        <div className="space-y-6 md:space-y-8 animate-fade-up">
-          <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm border-2 border-baum-500 text-baum-600 text-xs md:text-sm font-bold px-4 py-2 rounded-full shadow-sm">
+      <div className="max-w-6xl mx-auto px-4 relative z-10">
+        <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-up">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-baum-50 border border-baum-200 text-baum-600 text-xs md:text-sm font-bold px-5 py-2.5 rounded-full">
             <span className="w-2 h-2 bg-baum-500 rounded-full animate-pulse"></span>
             {heroData.badge}
           </div>
           
-          <h1 className="text-4xl md:text-6xl font-bold leading-[1.2] tracking-tight">
+          {/* Main Title */}
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.15] tracking-tight">
             {titleLines.map((line, i) => (
-              <span key={i} className={i === 0 ? 'text-text-primary' : 'block mt-2 gradient-text'}>
+              <span 
+                key={i} 
+                className={i === 0 
+                  ? 'text-text-primary block' 
+                  : 'block mt-2 text-baum-500'
+                }
+              >
                 {line}
               </span>
             ))}
           </h1>
           
-          <p className="text-base md:text-lg text-text-secondary leading-relaxed whitespace-pre-line">
+          {/* Subtitle */}
+          <p className="text-lg md:text-xl text-text-secondary leading-relaxed whitespace-pre-line max-w-2xl mx-auto">
             {heroData.subtitle}
           </p>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 pt-2">
+          {/* Stats */}
+          <div className="grid grid-cols-3 gap-3 md:gap-4 pt-4 max-w-2xl mx-auto">
             {heroData.stats.map((stat, i) => (
               <div 
                 key={i} 
-                className={`rounded-xl p-4 text-center transition-all duration-300 ${
+                className={`rounded-xl p-4 md:p-5 text-center transition-all duration-300 ${
                   stat.highlight 
-                    ? 'bg-gradient-to-br from-baum-500 to-baum-600 text-white shadow-cta transform scale-105' 
-                    : 'bg-white border border-baum-100 shadow-card hover:shadow-card-hover hover-lift'
+                    ? 'bg-gradient-to-br from-baum-500 to-baum-600 text-white shadow-lg shadow-baum-500/30 transform scale-105' 
+                    : 'bg-slate-50 border border-slate-200'
                 }`}
               >
-                {stat.value && (
-                  <div className={`text-xl md:text-2xl font-bold ${stat.highlight ? 'text-white' : 'text-baum-500'}`}>
-                    {stat.value}{stat.unit && <span className="text-base md:text-lg ml-0.5">{stat.unit}</span>}
-                    {stat.valueSubtext && (
-                      <span className={`text-base md:text-lg ml-1 ${stat.highlight ? 'text-white' : 'text-baum-500'}`}>
-                        {stat.valueSubtext}
-                      </span>
-                    )}
-                  </div>
-                )}
-                <div className={`text-[10px] md:text-xs ${stat.value ? 'mt-1' : 'mt-0'} leading-tight ${stat.highlight ? 'text-white/90' : 'text-text-tertiary'}`}>
+                <div className={`text-2xl md:text-3xl font-bold ${stat.highlight ? 'text-white' : 'text-text-primary'}`}>
+                  {stat.value}<span className="text-lg md:text-xl ml-0.5">{stat.unit}</span>
+                </div>
+                <div className={`text-xs md:text-sm mt-1 ${stat.highlight ? 'text-white/90' : 'text-text-tertiary'}`}>
                   {stat.label}
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="pt-2 md:pt-4">
-            <RichCtaButton text={heroData.cta.main} subtext={heroData.cta.sub} href={STRIPE_CHECKOUT_URL} />
+          {/* CTA */}
+          <div className="pt-6 md:pt-8">
+            <a 
+              href={CONSULTATION_URL}
+              className="group inline-flex flex-col items-center"
+            >
+              <button className="relative px-10 py-5 bg-gradient-to-r from-baum-500 to-baum-400 text-white font-bold text-lg md:text-xl rounded-full shadow-lg shadow-baum-500/30 hover:shadow-xl hover:shadow-baum-500/40 transition-all duration-300 hover:scale-105">
+                <span className="relative z-10">{heroData.cta.main}</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-baum-400 to-baum-300 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </button>
+              <span className="text-text-tertiary text-sm mt-3">{heroData.cta.sub}</span>
+            </a>
           </div>
-        </div>
-        
-        <div className="hidden md:block relative animate-fade-up" style={{ animationDelay: '0.2s' }}>
-          <div className="absolute -inset-4 bg-baum-400 rounded-2xl blur-xl opacity-20"></div>
-          <img 
-            src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-            alt="Dashboard and Team" 
-            className="relative rounded-2xl shadow-lg border-4 border-white object-cover h-96 w-full"
-            loading="eager"
-            fetchPriority="high"
-          />
         </div>
       </div>
     </section>
   );
 };
-

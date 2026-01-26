@@ -1,8 +1,8 @@
 import { TrendingUp, Calculator, CheckCircle } from 'lucide-react';
-import { salesRoiData } from '@/content/sales-roi';
+import { roiData } from '@/content/roi';
 
-export const SalesRoi = () => {
-  const { calculation, comparison, breakdown, message } = salesRoiData;
+export const Roi = () => {
+  const { calculation, comparison, breakdown, message } = roiData;
 
   return (
     <section className="py-20 md:py-28 bg-slate-50">
@@ -14,10 +14,10 @@ export const SalesRoi = () => {
             ROI Analysis
           </span>
           <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">
-            {salesRoiData.title}
+            {roiData.title}
           </h2>
           <p className="text-text-tertiary text-base md:text-lg max-w-2xl mx-auto">
-            {salesRoiData.subtitle}
+            {roiData.subtitle}
           </p>
         </div>
 

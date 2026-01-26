@@ -1,93 +1,69 @@
 export const pricingData = {
-  planName: "スタンダード会員",
-  monthlyPrice: 10000,
-  monthlyPriceWithTax: 11000,
-  yearlyPrice: 100000,
-  yearlyPriceWithTax: 110000,
-  features: [
-    "毎月開催！実践型セミナー（月2回・無料）",
-    "50種以上のe-learning見放題",
-    "チラシテンプレート配布",
-    "月1回オンライン交流会",
-    "認定講師・ジョンからのアドバイス",
-    "会員専用コミュニティ（Facebookページ、公式LINE）"
-  ],
-  valueStack: {
-    totalValue: 836000,
-    monthlyPrice: 10000,
-    items: [
-      {
-        name: "毎月セミナー2本",
-        value: 120000,
-        period: "年"
-      },
-      {
-        name: "e-learning 50本＋アーカイブ48本",
-        value: 198000,
-        period: ""
-      },
-      {
-        name: "チラシテンプレート配布",
-        value: 98000,
-        period: ""
-      },
-      {
-        name: "月1交流会",
-        value: 60000,
-        period: "年"
-      },
-      {
-        name: "認定講師・ジョンからのアドバイス",
-        value: 360000,
-        period: "年"
-      },
-      {
-        name: "会員コミュニティ",
-        value: 0,
-        period: "プライスレス"
-      }
-    ]
+  planName: "営業設計 完全伴走プログラム",
+  subtitle: "3ヶ月伴走型パッケージ",
+  price: {
+    amount: 300000,
+    tax: "税別",
+    display: "300,000",
+    period: "3ヶ月"
   },
-  bonuses: [
+  payment: {
+    options: [
+      {
+        type: "一括払い",
+        amount: "300,000円（税別）",
+        note: null
+      },
+      {
+        type: "分割払い",
+        amount: "110,000円 × 3回",
+        note: "総額330,000円（税別）"
+      }
+    ],
+    method: "銀行振込 / クレジットカード"
+  },
+  includes: [
     {
-      type: "PDF",
-      name: "1億円店舗・多店舗展開のロードマップ"
+      icon: "Users",
+      title: "集団MTG",
+      detail: "月1回 × 3回（60分/回）"
     },
     {
-      type: "Excel",
-      name: "収支表テンプレート"
+      icon: "Video",
+      title: "動画コンテンツ",
+      detail: "営業の基礎・考え方"
     },
     {
-      type: "PPT",
-      name: "職場説明会資料テンプレート"
+      icon: "MessageSquare",
+      title: "チャットサポート",
+      detail: "期間中いつでも相談OK"
+    },
+    {
+      icon: "FileText",
+      title: "成果物",
+      detail: "営業設計書・マニュアル等"
+    },
+    {
+      icon: "RefreshCw",
+      title: "AIによる効率化",
+      detail: "MTG記録・振り返りの自動化"
     }
   ],
-  specialOffers: [
-    {
-      name: "過去アーカイブ48本・即視聴権",
-      description: "入会即日から視聴可能"
-    },
-    {
-      name: "3-6ヶ月の伴走サポート",
-      description: "PDCAを回して結果を出す"
-    }
+  deliverables: [
+    "自社専用 営業設計書",
+    "ターゲットリスト",
+    "営業トーク台本",
+    "営業管理シート",
+    "営業マニュアル",
+    "継続改善チェックリスト"
   ],
-  comparison: {
-    competitor: {
-      name: "他協会",
-      annualFee: 10000,
-      seminarFee: 5000,
-      seminarsPerYear: 10,
-      totalHiddenCost: 60000
-    },
-    ourAssociation: {
-      name: "当協会",
-      monthlyFee: 10000,
-      seminarsIncluded: true,
-      totalCost: 120000
-    }
-  }
+  cta: {
+    main: "無料個別相談を予約する",
+    sub: "まずは現状の課題をお聞かせください"
+  },
+  notes: [
+    "※ お申し込み前に無料個別相談を実施します",
+    "※ 価格は予告なく変更する場合があります"
+  ],
+  guarantee: null
 };
-
-
-

@@ -1,12 +1,10 @@
+// Section Components
 export { Hero } from './Hero';
 export { Problem } from './Problem';
-export { RoiSection } from './RoiSection';
-export { Weapons } from './Weapons';
-export { ValueStack } from './ValueStack';
-export { UsageFlow } from './UsageFlow';
-export { Testimonials } from './Testimonials';
+export { Why } from './Why';
+export { Program } from './Program';
+export { Roi } from './Roi';
 export { Profile } from './Profile';
 export { Pricing } from './Pricing';
-export { FAQ } from './FAQ';
+export { Faq } from './Faq';
 export { Closing } from './Closing';
-

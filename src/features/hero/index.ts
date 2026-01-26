@@ -1,9 +1,0 @@
-export { Hero } from './Hero';
-
-
-
-
-
-
-
-

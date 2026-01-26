@@ -1,4 +1,4 @@
-export const salesProfileData = {
+export const profileData = {
   title: "講師紹介",
   subtitle: "訪問看護の「営業」を知り尽くした2人が伴走します",
   instructors: [
@@ -7,7 +7,7 @@ export const salesProfileData = {
       name: "富浦 義信",
       nameEn: "Yoshinobu Tomiura",
       role: "営業設計・伴走担当",
-      image: "/instructor_tomiura.jpg", // 要差し替え
+      image: "/instructor_tomiura.jpg",
       catchphrase: "「営業は設計が9割」",
       description: "訪問看護ステーションの営業支援を専門とし、「属人化しない営業の仕組み」構築に定評がある。理論ではなく「明日使える」実践ノウハウを重視。",
       expertise: [

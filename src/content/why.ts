@@ -1,4 +1,4 @@
-export const salesWhyData = {
+export const whyData = {
   title: "なぜ「設計」が必要なのか？",
   subtitle: "訪問看護の営業は、飛び込みや押し売りでは成果が出ません。関係構築から紹介につなげる仕組みが重要です。",
   comparison: {

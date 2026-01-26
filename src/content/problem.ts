@@ -1,4 +1,4 @@
-export const salesProblemData = {
+export const problemData = {
   title: "こんな状態で、営業を続けていませんか？",
   subtitle: "営業ノウハウは学んだ。でも、なぜか成果につながらない——その理由は「設計」にあります。",
   problems: [

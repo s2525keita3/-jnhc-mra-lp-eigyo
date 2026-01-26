@@ -1,74 +1,65 @@
-// React / Library imports
-import { useMemo } from 'react';
-import { CheckCircle, Star, X } from 'lucide-react';
-import { problemData } from '@/content';
+import { UserX, Shuffle, BookOpen, Clock, TrendingDown, HelpCircle } from 'lucide-react';
+import { problemData } from '@/content/problem';
+
+const iconMap = {
+  UserX,
+  Shuffle,
+  BookOpen,
+  Clock,
+  TrendingDown,
+  HelpCircle
+};
 
 export const Problem = () => {
-  const beforeItems = useMemo(() => problemData.before.items, []);
-  const afterItems = useMemo(() => problemData.after.items, []);
-
   return (
-    <section className="py-20 bg-bg-cream">
+    <section className="py-20 md:py-28 bg-slate-50">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-12 animate-fade-up">
+        {/* Header */}
+        <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">
             {problemData.title}
           </h2>
-          <p className="text-text-tertiary mt-4">
+          <p className="text-text-tertiary text-base md:text-lg max-w-2xl mx-auto">
             {problemData.subtitle}
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <div className="bg-white rounded-xl shadow-card p-8 border-l-8 border-slate-300 hover-lift animate-fade-up">
-            <div className="flex items-center mb-6">
-              <span className="bg-slate-200 text-slate-600 text-sm font-bold px-3 py-1 rounded-full">{problemData.before.label}</span>
-              <span className="ml-3 text-2xl">😰</span>
-            </div>
-            <ul className="space-y-4">
-              {beforeItems.map((item, i) => (
-                <li key={i} className="flex items-start">
-                  <X className="text-red-500 mr-3 flex-shrink-0" />
-                  <span className="text-text-secondary">{item}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-6 pt-6 border-t border-slate-200">
-              <p className="text-sm text-text-tertiary mb-2">{problemData.before.costCalculation.label}</p>
-              <p className="text-2xl font-bold text-red-500">
-                {problemData.before.costCalculation.formula}
-                <br />
-                <span className="text-3xl">{problemData.before.costCalculation.total}</span>
-              </p>
-            </div>
-          </div>
-          
-          <div className="bg-white rounded-xl shadow-card-hover p-8 border-l-8 border-baum-500 relative overflow-hidden hover-lift animate-fade-up" style={{ animationDelay: '0.2s' }}>
-            <div className="absolute top-0 right-0 p-4 opacity-10">
-              <Star size={100} className="text-baum-400" fill="currentColor" />
-            </div>
-            <div className="flex items-center mb-6 relative z-10">
-              <span className="gradient-cta text-white text-sm font-bold px-3 py-1 rounded-full">{problemData.after.label}</span>
-              <span className="ml-3 text-2xl">😎</span>
-            </div>
-            <ul className="space-y-4 relative z-10">
-              {afterItems.map((item, i) => (
-                <li key={i} className="flex items-start">
-                  <CheckCircle className="text-green-500 mr-3 flex-shrink-0" />
-                  <span className="text-text-secondary">{item}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-6 pt-6 border-t border-baum-200 relative z-10">
-              <p className="text-sm text-text-tertiary mb-2">{problemData.after.costSummary.label}</p>
-              <p className="text-2xl font-bold text-baum-500">
-                {problemData.after.costSummary.amount}
-              </p>
-            </div>
+        {/* Problems Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          {problemData.problems.map((problem, i) => {
+            const Icon = iconMap[problem.icon as keyof typeof iconMap];
+            return (
+              <div 
+                key={i} 
+                className="bg-slate-50 rounded-xl p-6 border border-slate-200 hover:border-baum-300 transition-all duration-300 hover-lift animate-fade-up"
+                style={{ animationDelay: `${i * 0.1}s` }}
+              >
+                <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4">
+                  <Icon className="w-6 h-6 text-red-500" />
+                </div>
+                <h3 className="text-lg font-bold text-text-primary mb-2">
+                  {problem.title}
+                </h3>
+                <p className="text-text-tertiary text-sm leading-relaxed">
+                  {problem.description}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Conclusion */}
+        <div className="max-w-3xl mx-auto animate-fade-up">
+          <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-8 md:p-12 text-center text-white">
+            <h3 className="text-xl md:text-2xl font-bold mb-4">
+              {problemData.conclusion.title}
+            </h3>
+            <p className="text-slate-300 leading-relaxed whitespace-pre-line">
+              {problemData.conclusion.description}
+            </p>
           </div>
         </div>
       </div>
     </section>
   );
 };
-
