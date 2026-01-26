@@ -8,7 +8,7 @@ export const heroData = {
   },
   stats: [
     { value: "3", unit: "ヶ月", label: "伴走期間" },
-    { value: "30", unit: "万円〜", label: "税別", highlight: true },
+    { value: "30", unit: "万円", label: "税別", highlight: true },
     { value: "月1", unit: "回", label: "集団MTG（60分）" }
   ]
 };
