@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { ChevronDown, HelpCircle } from 'lucide-react';
 import { faqData } from '@/content/faq';
 
