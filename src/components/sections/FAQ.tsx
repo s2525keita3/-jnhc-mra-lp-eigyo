@@ -15,7 +15,8 @@ export const Faq = () => {
             FAQ
           </span>
           <h2 className="text-2xl md:text-4xl font-bold text-text-primary">
-            繧医￥縺ゅｋ雉ｪ蝠・          </h2>
+            よくある貪問
+          </h2>
         </div>
 
         {/* FAQ Accordion */}
@@ -60,7 +61,8 @@ export const Faq = () => {
         {/* Additional Note */}
         <div className="mt-12 text-center animate-fade-up">
           <p className="text-text-tertiary text-sm">
-            縺昴・莉悶・縺碑ｳｪ蝠上・縲∫┌譁吝句挨逶ｸ隲・〒縺頑ｰ苓ｻｽ縺ｫ縺願◇縺阪￥縺縺輔＞縲・          </p>
+            その他のご質問は、無料個別相諊でお気軽にお聞きください。
+          </p>
         </div>
       </div>
     </section>
