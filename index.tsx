@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './src/App';
+// import App from './src/App'; // 既存の会員LP
+import SalesApp from './src/SalesApp'; // 営業LPに切り替え
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
@@ -10,6 +11,6 @@ if (!rootElement) {
 const root = ReactDOM.createRoot(rootElement);
 root.render(
   <React.StrictMode>
-    <App />
+    <SalesApp />
   </React.StrictMode>
 );
