@@ -4,6 +4,7 @@ import { useMemo } from 'react';
 // Components
 import { RichCtaButton } from '@/components/ui/RichCtaButton';
 import { heroData } from '@/content';
+import { STRIPE_CHECKOUT_URL } from '@/shared/constants';
 
 export const Hero = () => {
   const titleLines = useMemo(() => heroData.title.split('\n'), []);
@@ -63,7 +64,7 @@ export const Hero = () => {
           </div>
 
           <div className="pt-2 md:pt-4">
-            <RichCtaButton text={heroData.cta.main} subtext={heroData.cta.sub} href="#apply" />
+            <RichCtaButton text={heroData.cta.main} subtext={heroData.cta.sub} href={STRIPE_CHECKOUT_URL} />
           </div>
         </div>
         
