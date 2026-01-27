@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { heroData } from '@/content/hero';
 
-const CONSULTATION_URL = "#consultation";
+const CONSULTATION_URL = "#contact";
 
 export const Hero = () => {
   const titleLines = useMemo(() => heroData.title.split('\n'), []);

@@ -1,7 +1,7 @@
 import { Target, RefreshCw, TrendingUp, CheckCircle } from 'lucide-react';
 import { closingData } from '@/content/closing';
 
-const CONSULTATION_URL = "#consultation";
+const CONSULTATION_URL = "#contact";
 
 const iconMap = { Target, RefreshCw, TrendingUp };
 

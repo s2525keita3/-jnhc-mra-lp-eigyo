@@ -9,3 +9,4 @@ export { Profile } from './Profile';
 export { Pricing } from './Pricing';
 export { Faq } from './Faq';
 export { Closing } from './Closing';
+export { Contact } from './Contact';

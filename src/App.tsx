@@ -15,6 +15,7 @@ const Profile = lazy(() => import('@/components/sections/Profile').then(m => ({ 
 const Pricing = lazy(() => import('@/components/sections/Pricing').then(m => ({ default: m.Pricing })));
 const Faq = lazy(() => import('@/components/sections/Faq').then(m => ({ default: m.Faq })));
 const Closing = lazy(() => import('@/components/sections/Closing').then(m => ({ default: m.Closing })));
+const Contact = lazy(() => import('@/components/sections/Contact').then(m => ({ default: m.Contact })));
 
 function App() {
   return (
@@ -71,6 +72,11 @@ function App() {
         {/* 10. Closing - 最終CTA */}
         <Suspense fallback={<div className="h-96" />}>
           <Closing />
+        </Suspense>
+
+        {/* 11. Contact - お問い合わせフォーム */}
+        <Suspense fallback={<div className="h-96" />}>
+          <Contact />
         </Suspense>
       </main>
 

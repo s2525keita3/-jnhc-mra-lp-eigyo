@@ -1,7 +1,7 @@
 import { CheckCircle, User, Users, Video, MessageSquare, FileText, RefreshCw, CreditCard, Building } from 'lucide-react';
 import { pricingData } from '@/content/pricing';
 
-const CONSULTATION_URL = "#consultation";
+const CONSULTATION_URL = "#contact";
 
 const iconMap = { User, Users, Video, MessageSquare, FileText, RefreshCw };
 

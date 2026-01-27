@@ -9,3 +9,4 @@ export { profileData } from './profile';
 export { pricingData } from './pricing';
 export { faqData } from './faq';
 export { closingData } from './closing';
+export { contactData } from './contact';

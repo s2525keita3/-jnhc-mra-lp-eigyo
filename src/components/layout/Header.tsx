@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 
-const CONSULTATION_URL = "#consultation";
+const CONSULTATION_URL = "#contact";
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);

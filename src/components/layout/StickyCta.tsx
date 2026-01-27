@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { MessageCircle } from 'lucide-react';
 
-const CONSULTATION_URL = "#consultation";
+const CONSULTATION_URL = "#contact";
 
 export const StickyCta = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -28,7 +28,7 @@ export const StickyCta = () => {
         <div className="max-w-4xl mx-auto px-4 py-3 md:py-4 flex items-center justify-between gap-4">
           <div className="text-white hidden md:block">
             <p className="font-bold">営業力強化 3ヶ月伴走プログラム</p>
-            <p className="text-white/80 text-sm">30万円〜（税別）</p>
+            <p className="text-white/80 text-sm">30万円（税別）</p>
           </div>
           <div className="text-white md:hidden">
             <p className="font-bold text-sm">3ヶ月伴走プログラム</p>
