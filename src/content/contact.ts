@@ -14,7 +14,6 @@ export const contactData = {
     privacy: "当社のプライバシーポリシーに同意しますか？"
   },
   submitButton: "送信する",
-  privacyOptions: ["同意する"],
   successMessage: "お問い合わせありがとうございます。\n2営業日以内にご連絡いたします。",
   errorMessage: "送信に失敗しました。\n時間をおいて再度お試しください。"
 };

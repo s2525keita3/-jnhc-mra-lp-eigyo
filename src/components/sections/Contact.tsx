@@ -231,23 +231,23 @@ export const Contact = () => {
             </div>
 
             {/* プライバシーポリシー */}
-            <div>
-              <label className="block text-text-primary font-medium mb-2">
+            <div className="flex items-start gap-3">
+              <input
+                type="checkbox"
+                id="privacy"
+                name="privacy"
+                checked={formData.privacy === 'agreed'}
+                onChange={(e) => setFormData(prev => ({
+                  ...prev,
+                  privacy: e.target.checked ? 'agreed' : ''
+                }))}
+                required
+                className="w-5 h-5 mt-0.5 text-baum-500 border-slate-300 rounded focus:ring-baum-500 cursor-pointer"
+              />
+              <label htmlFor="privacy" className="text-text-primary cursor-pointer">
                 {contactData.fields.privacy}
                 <span className="text-red-500 ml-1">*</span>
               </label>
-              <select
-                name="privacy"
-                value={formData.privacy}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-baum-500 focus:border-baum-500 outline-none transition-all bg-white"
-              >
-                <option value="">選択してください</option>
-                {contactData.privacyOptions.map((option, i) => (
-                  <option key={i} value={option}>{option}</option>
-                ))}
-              </select>
             </div>
 
             {/* Submit Button */}
