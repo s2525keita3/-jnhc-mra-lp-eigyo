@@ -3,7 +3,7 @@ import { Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 import { contactData } from '@/content/contact';
 
 // Web3Forms Access Key - 後で設定してください
-const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
+const WEB3FORMS_ACCESS_KEY = "a1b76939-e4b9-425e-b267-cf6cfcab16b4";
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 
