@@ -21,79 +21,98 @@ export const Profile = () => {
         </div>
 
         {/* Instructor Cards */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="space-y-10 mb-12">
           {instructors.map((instructor, i) => (
             <div 
               key={instructor.id}
               className="bg-white rounded-2xl shadow-card border border-baum-100 overflow-hidden hover-lift animate-fade-up"
               style={{ animationDelay: `${i * 0.15}s` }}
             >
-              {/* Photo & Basic Info */}
-              <div className="relative">
-                <div className="h-64 bg-gradient-to-br from-slate-200 to-slate-300 relative overflow-hidden">
-                  <img 
-                    src={instructor.image}
-                    alt={instructor.name}
-                    className="w-full h-full object-cover object-top"
-                    loading="lazy"
-                    onError={(e) => {
-                      // フォールバック: 画像がない場合はプレースホルダー表示
-                      e.currentTarget.style.display = 'none';
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                </div>
-                <div className="absolute bottom-0 left-0 w-full p-6 text-white">
-                  <p className="text-baum-400 text-sm font-bold mb-1">{instructor.role}</p>
-                  <h3 className="text-2xl font-bold">
-                    {instructor.name}
-                    {instructor.nameEn && (
-                      <span className="text-sm font-normal text-white/70 ml-2">{instructor.nameEn}</span>
+              <div className="flex flex-col md:flex-row">
+                {/* Photo */}
+                <div className="relative md:w-2/5 flex-shrink-0">
+                  <div className="h-72 md:h-full md:min-h-[400px] bg-gradient-to-br from-slate-100 to-slate-200 relative overflow-hidden">
+                    <img 
+                      src={instructor.image}
+                      alt={instructor.name}
+                      className="w-full h-full object-cover"
+                      style={{ objectPosition: instructor.imagePosition || 'center 20%' }}
+                      loading="lazy"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:to-black/10"></div>
+                  </div>
+                  {/* Name overlay (mobile) */}
+                  <div className="absolute bottom-0 left-0 w-full p-5 text-white md:hidden">
+                    <p className="text-baum-400 text-sm font-bold mb-1">{instructor.role}</p>
+                    <h3 className="text-2xl font-bold">
+                      {instructor.name}
+                      {instructor.nameEn && (
+                        <span className="text-sm font-normal text-white/70 ml-2">{instructor.nameEn}</span>
+                      )}
+                    </h3>
+                    {instructor.nickname && (
+                      <p className="text-white/70 text-sm">通称: {instructor.nickname}</p>
                     )}
-                  </h3>
-                  {instructor.nickname && (
-                    <p className="text-white/70 text-sm">通称: {instructor.nickname}</p>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="flex-1 p-6 md:p-8 flex flex-col justify-center">
+                  {/* Name (desktop) */}
+                  <div className="hidden md:block mb-5">
+                    <p className="text-baum-500 text-sm font-bold mb-1">{instructor.role}</p>
+                    <h3 className="text-2xl font-bold text-text-primary">
+                      {instructor.name}
+                      {instructor.nameEn && (
+                        <span className="text-base font-normal text-text-tertiary ml-2">{instructor.nameEn}</span>
+                      )}
+                    </h3>
+                    {instructor.nickname && (
+                      <p className="text-text-tertiary text-sm">通称: {instructor.nickname}</p>
+                    )}
+                  </div>
+
+                  <p className="text-baum-500 font-bold text-lg mb-4 border-l-4 border-baum-500 pl-4">
+                    {instructor.catchphrase}
+                  </p>
+                  <p className="text-text-secondary leading-relaxed mb-6">
+                    {instructor.description}
+                  </p>
+
+                  {/* Expertise */}
+                  <div className="mb-6">
+                    <h4 className="text-sm font-bold text-text-tertiary mb-3">専門領域</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {instructor.expertise.map((item, j) => (
+                        <span 
+                          key={j}
+                          className="bg-baum-100 text-baum-600 text-xs font-medium px-3 py-1.5 rounded-full"
+                        >
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Stats */}
+                  {instructor.stats && instructor.stats.length > 0 && (
+                    <div className={`grid gap-3 pt-6 border-t border-baum-100 ${
+                      instructor.stats.length <= 2 ? 'grid-cols-2' : 'grid-cols-2 md:grid-cols-4'
+                    }`}>
+                      {instructor.stats.map((stat, j) => (
+                        <div key={j} className="text-center">
+                          <div className="text-xl font-bold text-text-primary">
+                            {stat.value}<span className="text-sm font-normal">{stat.unit}</span>
+                          </div>
+                          <div className="text-[10px] text-text-tertiary">{stat.label}</div>
+                        </div>
+                      ))}
+                    </div>
                   )}
                 </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-6 md:p-8">
-                <p className="text-baum-500 font-bold text-lg mb-4 border-l-4 border-baum-500 pl-4">
-                  {instructor.catchphrase}
-                </p>
-                <p className="text-text-secondary leading-relaxed mb-6">
-                  {instructor.description}
-                </p>
-
-                {/* Expertise */}
-                <div className="mb-6">
-                  <h4 className="text-sm font-bold text-text-tertiary mb-3">専門領域</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {instructor.expertise.map((item, j) => (
-                      <span 
-                        key={j}
-                        className="bg-baum-100 text-baum-600 text-xs font-medium px-3 py-1.5 rounded-full"
-                      >
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Stats */}
-                {instructor.stats && instructor.stats.length > 0 && (
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3 pt-6 border-t border-baum-100">
-                    {instructor.stats.map((stat, j) => (
-                      <div key={j} className="text-center">
-                        <div className="text-xl font-bold text-text-primary">
-                          {stat.value}<span className="text-sm font-normal">{stat.unit}</span>
-                        </div>
-                        <div className="text-[10px] text-text-tertiary">{stat.label}</div>
-                      </div>
-                    ))}
-                  </div>
-                )}
               </div>
             </div>
           ))}
