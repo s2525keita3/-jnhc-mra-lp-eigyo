@@ -13,7 +13,7 @@ const Program = lazy(() => import('@/components/sections/Program').then(m => ({ 
 const Roi = lazy(() => import('@/components/sections/Roi').then(m => ({ default: m.Roi })));
 const Profile = lazy(() => import('@/components/sections/Profile').then(m => ({ default: m.Profile })));
 const Pricing = lazy(() => import('@/components/sections/Pricing').then(m => ({ default: m.Pricing })));
-const Faq = lazy(() => import('@/components/sections/Faq').then(m => ({ default: m.Faq })));
+const Faq = lazy(() => import('@/components/sections/FAQ').then(m => ({ default: m.Faq })));
 const Closing = lazy(() => import('@/components/sections/Closing').then(m => ({ default: m.Closing })));
 const Contact = lazy(() => import('@/components/sections/Contact').then(m => ({ default: m.Contact })));
 
