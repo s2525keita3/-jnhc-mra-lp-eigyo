@@ -113,6 +113,13 @@ npx tsc --noEmit
 - `@/`エイリアスの設定確認
 - インポートパスの確認
 
+#### 注意: インポートパスの大文字小文字（Vercel必須）
+
+Vercelのビルド環境は**Linux（大文字小文字を区別）**のため、インポートパスは**実ファイル名と完全一致**させること。Windowsでは `Faq` と `FAQ` が同じファイルを指すが、Vercelでは別ファイル扱いでビルド失敗する。
+
+- 例: ファイルが `FAQ.tsx` の場合 → `import('@/components/sections/FAQ')` とし、`Faq` は使わない
+- 詳細は `docs/10_TROUBLESHOOTING.md` の「ENOENT: no such file or directory」を参照
+
 ### デプロイエラー
 
 #### エラー: 環境変数が見つからない

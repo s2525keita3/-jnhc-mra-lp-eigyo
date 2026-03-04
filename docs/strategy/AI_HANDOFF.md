@@ -58,7 +58,8 @@ jnhc-mra-lp_new/
 ├── app/
 │   └── globals.css              # グローバルCSS（現在は空）
 ├── public/                      # 静的アセット配置ディレクトリ
-│   └── teacher_john.JPG         # 講師プロフィール画像
+│   ├── teacher_john.JPG         # 講師プロフィール画像（渋谷）
+│   └── teacher_tomiura.png      # 講師プロフィール画像（富浦）
 ├── dist/                        # ビルド出力ディレクトリ（自動生成）
 │   ├── assets/
 │   └── index.html
@@ -629,6 +630,12 @@ npm run preview
 1. **テキスト内容:** `App.tsx`内の各コンポーネントを直接編集
 2. **画像更新:** `public/`ディレクトリに配置後、パスを更新
 3. **料金変更:** `Pricing`コンポーネント内の数値を更新
+
+### Vercelビルド・インポートパスの注意（必須）
+
+- **インポートパスは実ファイル名の大文字小文字と完全一致させること。** Windowsでは `Faq` と `FAQ` が同じファイルを指すが、Vercel（Linux）では区別され、`ENOENT: no such file or directory` でビルド失敗する。
+- 例: ファイルが `FAQ.tsx` の場合 → `import('@/components/sections/FAQ')` とし、`Faq` は使わない。`App.tsx` と `src/components/sections/index.ts` の両方でパスを合わせる。
+- 詳細: `docs/10_TROUBLESHOOTING.md` を参照。
 
 ### パフォーマンス維持
 

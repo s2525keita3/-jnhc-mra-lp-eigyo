@@ -10,7 +10,8 @@
 ```
 jnhc-mra-lp_new/
 ├── public/                          # 静的アセット
-│   └── teacher_john.JPG            # 講師プロフィール画像
+│   ├── teacher_john.JPG            # 講師プロフィール画像（渋谷）
+│   └── teacher_tomiura.png         # 講師プロフィール画像（富浦）
 │
 ├── src/                             # ソースコード
 │   ├── App.tsx                      # メインアプリケーション（セクション順序定義）
@@ -50,6 +51,7 @@ jnhc-mra-lp_new/
 │   │   ├── roi.ts                  # ROI計算・比較データ
 │   │   ├── program.ts              # Weapons（4つの武器）の詳細
 │   │   ├── pricing.ts              # 料金・特典データ
+│   │   ├── profile.ts              # 講師紹介データ（富浦・渋谷）
 │   │   ├── faq.ts                  # よくある質問（14項目）
 │   │   ├── closing.ts              # クロージングメッセージ
 │   │   └── index.ts                # Barrel file
@@ -152,6 +154,7 @@ jnhc-mra-lp_new/
 ### コンポーネントファイル
 - **命名**: PascalCase（例: `Hero.tsx`, `RichCtaButton.tsx`）
 - **拡張子**: `.tsx` (TypeScript + JSX)
+- **重要**: インポートパスは**ファイル名の大文字小文字をそのまま**使うこと。Vercel（Linux）では大文字小文字が区別されるため、`FAQ.tsx` に対して `./Faq` と書くとビルド失敗する。
 
 ### データファイル
 - **命名**: camelCase（例: `hero.ts`, `pricing.ts`）
@@ -208,6 +211,7 @@ import { Hero } from '@/components/sections/Hero';
 3. ✅ Barrel file（`index.ts`）にエクスポートを追加したか
 4. ✅ 型定義が適切か
 5. ✅ インポートパスがエイリアス（`@/`）を使用しているか
+6. ✅ **インポートパスの大文字小文字が実ファイル名と一致しているか**（Vercelビルドで必須）
 
 ---
 

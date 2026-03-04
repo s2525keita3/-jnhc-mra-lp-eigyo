@@ -1,20 +1,37 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 一般社団法人 全国訪問看護経営研究協会 ランディングページ（営業向け）
 
-# Run and deploy your AI Studio app
+訪問看護ステーション開業支援・経営改善のための有料会員募集LP（営業・伴走向け）です。
 
-This contains everything you need to run your app locally.
+---
 
-View your app in AI Studio: https://ai.studio/apps/drive/1NV_aQEq78T-YJalXj3ZaYlSN25MntZ8Y
+## クイックスタート
 
-## Run Locally
+```bash
+npm install
+npm run dev
+```
 
-**Prerequisites:**  Node.js
+- **開発**: http://localhost:3000
+- **ビルド**: `npm run build`
+- **プレビュー**: `npm run preview`
 
+---
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## ドキュメント
+
+- **専門家・開発者向け**: [docs/README.md](docs/README.md) … プロジェクト完全ドキュメント（00〜10）
+- **一覧で確認したい**: [docs/00_INDEX_EXPERT.md](docs/00_INDEX_EXPERT.md) … フォルダ構成・目的別ショートカット
+
+---
+
+## 主な構成
+
+| 場所 | 内容 |
+|------|------|
+| `src/App.tsx` | セクション順・レイアウト |
+| `src/components/sections/` | 各LPセクション |
+| `src/content/` | 文言・データ（更新はここ） |
+| `public/` | 画像など静的アセット |
+| `docs/` | 開発・運用・戦略ドキュメント |
+
+環境変数は `VITE_STRIPE_CHECKOUT_URL` を必要に応じて `.env.local` に設定してください。

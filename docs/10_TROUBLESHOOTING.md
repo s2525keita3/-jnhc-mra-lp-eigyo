@@ -44,6 +44,26 @@ description: "1応募1採用に近づけるために「伝えること」"
 description: "1応募1採用に近づけるために"伝えること""
 ```
 
+#### エラー: `Could not load .../Faq: ENOENT: no such file or directory`（Vercelビルド失敗）
+
+**原因**: インポートパスの**大文字小文字**が実ファイル名と一致していない。Windowsは大文字小文字を区別しないが、Vercel（Linux）は区別する。
+
+**解決策**:
+- ファイル名が `FAQ.tsx` なら、インポートも **`FAQ`** にすること（`Faq` は不可）
+- `App.tsx` および `src/components/sections/index.ts` の両方でパスを実ファイル名と完全一致させる
+
+```typescript
+// ✅ 正しい（ファイルが FAQ.tsx の場合）
+import('@/components/sections/FAQ')
+export { Faq } from './FAQ';
+
+// ❌ 間違い（Vercelでビルド失敗する）
+import('@/components/sections/Faq')
+export { Faq } from './Faq';
+```
+
+**注意**: 新規コンポーネント追加時は、ファイル名とインポートパスの大文字小文字を一致させること。
+
 ---
 
 ### ランタイムエラー
@@ -67,8 +87,9 @@ const items = data.items; // dataがundefinedの場合エラー
 
 **解決策**:
 ```typescript
-// ✅ 正しい（public/からの相対パス）
+// ✅ 正しい（public/からのルートパス）
 <img src="/teacher_john.JPG" />
+<img src="/teacher_tomiura.png" />  // 講師紹介は profileData（profile.ts）でパスを管理
 
 // ❌ 間違い
 <img src="./teacher_john.JPG" />

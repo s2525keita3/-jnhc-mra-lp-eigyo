@@ -99,7 +99,8 @@ App.tsx (ルート)
 
 #### Profile.tsx
 - **役割**: 講師プロフィール
-- **画像**: `/teacher_john.JPG` (lazy loading)
+- **データ**: `profileData` from `@/content/profile`（富浦・渋谷の2名）
+- **画像**: `/teacher_tomiura.png`（富浦）, `/teacher_john.JPG`（渋谷）(lazy loading)
 - **状態管理**: なし（静的）
 
 #### FAQ.tsx

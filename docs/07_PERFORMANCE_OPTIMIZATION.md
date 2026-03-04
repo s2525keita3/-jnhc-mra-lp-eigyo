@@ -107,7 +107,7 @@ window.addEventListener('scroll', handleScroll, { passive: true });
 ### 現在の画像
 
 - **Hero画像**: Unsplash（外部CDN）
-- **Profile画像**: `/teacher_john.JPG` (ローカル)
+- **Profile画像**: `/teacher_tomiura.png`（富浦）, `/teacher_john.JPG`（渋谷）(ローカル)
 
 ### 推奨される最適化
 

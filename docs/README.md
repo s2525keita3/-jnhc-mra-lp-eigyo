@@ -6,6 +6,13 @@
 
 ---
 
+## 🧭 専門家向けマスターインデックス
+
+**どこに何があるか一覧で確認したい場合** → [00_INDEX_EXPERT.md](./00_INDEX_EXPERT.md)  
+（フォルダ構成・目的別ショートカット・strategy / proposals の位置を一望できます）
+
+---
+
 ## 📚 ドキュメント一覧
 
 ### 00. [プロジェクト概要・要件定義書](./00_PROJECT_OVERVIEW.md)
@@ -140,15 +147,25 @@ VITE_STRIPE_CHECKOUT_URL=https://buy.stripe.com/...
 
 ---
 
-## 🔗 関連ドキュメント
+## 📁 戦略・提案ドキュメント（参照用）
 
-- `AI_HANDOFF.md` - 技術的な詳細（既存）
-- `LP_STRUCTURE_ANALYSIS.md` - LP構造分析（既存）
-- `MARKETING_CREATIVE_BIBLE.md` - マーケティング戦略（既存）
+### strategy/（戦略・分析・ライティング）
+
+- [AI_HANDOFF.md](./strategy/AI_HANDOFF.md) - 技術ハンドオフ・全体像
+- [LP_STRUCTURE_ANALYSIS.md](./strategy/LP_STRUCTURE_ANALYSIS.md) - LP構造分析
+- [MARKETING_CREATIVE_BIBLE.md](./strategy/MARKETING_CREATIVE_BIBLE.md) - マーケティング・クリエイティブ方針
+- [PERFORMANCE_OPTIMIZATION_REPORT.md](./strategy/PERFORMANCE_OPTIMIZATION_REPORT.md) - パフォーマンス最適化レポート
+- [WRITING_STRATEGY_INDEX.md](./strategy/WRITING_STRATEGY_INDEX.md) - ライティング戦略一覧
+- WRITING_STRATEGY_01 〜 06 - セクション別ライティング戦略
+
+### proposals/（提案書）
+
+- [HERO_CV_MAXIMIZATION_PROPOSAL.md](./proposals/HERO_CV_MAXIMIZATION_PROPOSAL.md) - Hero CV最大化提案
+- [HERO_TITLE_DESIGN_PROPOSAL.md](./proposals/HERO_TITLE_DESIGN_PROPOSAL.md) - タイトルデザイン提案
 
 ---
 
-**最終更新**: 2024年11月  
+**最終更新**: 2025年3月  
 **バージョン**: 1.0.0
 
 
