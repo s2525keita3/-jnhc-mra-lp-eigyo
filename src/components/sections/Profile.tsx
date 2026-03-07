@@ -75,7 +75,7 @@ export const Profile = () => {
                     )}
                   </div>
 
-                  <p className="text-baum-500 font-bold text-lg mb-4 border-l-4 border-baum-500 pl-4">
+                  <p className="text-baum-500 font-bold text-sm sm:text-base md:text-lg mb-4 border-l-4 border-baum-500 pl-4">
                     {instructor.catchphrase}
                   </p>
                   <p className="text-text-secondary leading-relaxed mb-6">

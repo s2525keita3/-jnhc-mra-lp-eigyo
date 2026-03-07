@@ -16,7 +16,7 @@ export const Problem = () => {
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-up">
-          <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">
+          <h2 className="text-[1.2rem] sm:text-xl md:text-4xl font-bold text-text-primary mb-4">
             {problemData.title}
           </h2>
           <p className="text-text-tertiary text-base md:text-lg max-w-2xl mx-auto">

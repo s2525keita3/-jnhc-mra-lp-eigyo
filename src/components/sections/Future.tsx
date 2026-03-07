@@ -18,7 +18,7 @@ export const Future = () => {
           <span className="inline-block bg-baum-100 text-baum-600 font-bold tracking-wider text-sm uppercase px-4 py-2 rounded-full mb-4">
             Your Goal
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-text-primary">
+          <h2 className="text-[1.35rem] sm:text-2xl md:text-5xl font-bold mb-4 text-text-primary">
             {futureData.title}
           </h2>
           <p className="text-text-secondary text-lg">

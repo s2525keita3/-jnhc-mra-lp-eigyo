@@ -15,7 +15,7 @@ export const Program = () => {
           <span className="text-baum-500 font-bold tracking-wider text-sm uppercase bg-bg-orange-light px-4 py-2 rounded-full">
             3-Month Program
           </span>
-          <h2 className="text-2xl md:text-4xl font-bold text-text-primary mt-6 mb-4">
+          <h2 className="text-[1.25rem] sm:text-xl md:text-4xl font-bold text-text-primary mt-6 mb-4">
             {programData.title}
           </h2>
           <p className="text-text-tertiary text-base md:text-lg max-w-2xl mx-auto">

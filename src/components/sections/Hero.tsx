@@ -22,8 +22,8 @@ export const Hero = () => {
             {heroData.badge}
           </div>
           
-          {/* Main Title - スマホで「営業センスに頼らない。」を1行に収めるためモバイルはやや小さく */}
-          <h1 className="text-[1.35rem] sm:text-3xl md:text-6xl lg:text-7xl font-bold leading-[1.15] tracking-tight">
+          {/* Main Title - スマホで1行／PCでも1行に収めるようレスポンシブ調整 */}
+          <h1 className="text-[1.35rem] sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-[1.15] tracking-tight">
             {titleLines.map((line, i) => (
               <span 
                 key={i} 
