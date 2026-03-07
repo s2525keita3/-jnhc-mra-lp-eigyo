@@ -67,6 +67,7 @@ jnhc-mra-lp_eigyo/
 | **マーケ・クリエイティブ方針** | [strategy/MARKETING_CREATIVE_BIBLE.md](./strategy/MARKETING_CREATIVE_BIBLE.md) |
 | **ライティング戦略（一覧）** | [strategy/WRITING_STRATEGY_INDEX.md](./strategy/WRITING_STRATEGY_INDEX.md) |
 | **Hero CV最大化・タイトル提案** | [proposals/](./proposals/) 内の各ファイル |
+| **他案件で同じ構成・デザインを使う** | [REQUIREMENTS_SPECIFICATION.md](./REQUIREMENTS_SPECIFICATION.md)（要件定義）, [DESIGN_SPECIFICATION.md](./DESIGN_SPECIFICATION.md)（デザイン定義） |
 
 ---
 
