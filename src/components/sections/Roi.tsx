@@ -57,6 +57,7 @@ export const Roi = () => {
                 <TrendingUp className="w-8 h-8 mx-auto mb-2" />
                 <p className="font-bold text-lg">{calculation.conclusion}</p>
               </div>
+              <p className="mt-3 text-xs text-text-tertiary text-center">{calculation.disclaimer}</p>
             </div>
           </div>
         </div>

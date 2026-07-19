@@ -24,7 +24,8 @@ export const roiData = {
         description: "3ヶ月の営業活動で5名獲得を目指す"
       }
     ],
-    conclusion: "仮に3ヶ月で利用者が5名増えれば、年間売上+330万円。投資の約11倍のリターン。"
+    conclusion: "仮に3ヶ月で利用者が5名増えれば、年間売上+330万円。投資の約11倍のリターン。",
+    disclaimer: "※単価・獲得数を仮定したシミュレーションであり、成果を保証するものではありません"
   },
   comparison: {
     title: "他のコンサルと比較",
@@ -48,7 +49,7 @@ export const roiData = {
         price: "月10万円",
         period: "3ヶ月",
         total: "30万円",
-        note: "週1の伴走 + 自社専用設計",
+        note: "月1回MTG＋チャット伴走 + 自社専用設計",
         highlight: true
       }
     ]

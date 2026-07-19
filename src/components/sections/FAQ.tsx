@@ -15,7 +15,7 @@ export const Faq = () => {
             FAQ
           </span>
           <h2 className="text-2xl md:text-4xl font-bold text-text-primary">
-            よくある貪問
+            よくある質問
           </h2>
         </div>
 
@@ -61,7 +61,7 @@ export const Faq = () => {
         {/* Additional Note */}
         <div className="mt-12 text-center animate-fade-up">
           <p className="text-text-tertiary text-sm">
-            その他のご質問は、無料個別相諊でお気軽にお聞きください。
+            その他のご質問は、無料個別相談でお気軽にお聞きください。
           </p>
         </div>
       </div>

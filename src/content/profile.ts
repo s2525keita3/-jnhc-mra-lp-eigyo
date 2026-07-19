@@ -16,8 +16,7 @@ export const profileData = {
         "紹介獲得の仕組みづくり"
       ],
       stats: [
-        { value: "50", unit: "社+", label: "営業支援実績" },
-        { value: "100", unit: "%", label: "継続率" }
+        { value: "50", unit: "社+", label: "営業支援実績" }
       ]
     },
     {
@@ -39,7 +38,7 @@ export const profileData = {
         { value: "50", unit: "社+", label: "支援実績" },
         { value: "11", unit: "万+", label: "SNSフォロワー" },
         { value: "5", unit: "億", label: "年商規模" },
-        { value: "5", unit: "店舗", label: "展開" }
+        { value: "6", unit: "拠点", label: "展開" }
       ]
     }
   ],
